@@ -94,7 +94,3 @@ php artisan serve
 ## Contribuição
 
 Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar um Pull Request.
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
