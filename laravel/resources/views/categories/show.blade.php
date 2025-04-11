@@ -72,11 +72,13 @@
                             </div>
                             @auth
                                 @if($product->stock > 0)
-                                    <a href="{{ route('cart.add', $product->id) }}" 
-                                       class="btn btn-primary w-100">
-                                        <i class="fas fa-cart-plus me-2"></i>
-                                        Adicionar ao Carrinho
-                                    </a>
+                                    <form action="{{ route('cart.add', $product->id) }}" method="POST" class="d-inline">
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary w-100">
+                                            <i class="fas fa-cart-plus me-2"></i>
+                                            Adicionar ao Carrinho
+                                        </button>
+                                    </form>
                                 @else
                                     <button class="btn btn-secondary w-100" disabled>
                                         <i class="fas fa-times-circle me-2"></i>
